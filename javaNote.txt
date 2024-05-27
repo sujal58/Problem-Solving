@@ -1,0 +1,65 @@
+public class Functions {
+	public static void main(String main[] args){
+		int value = 11;
+						value is called arguments
+		int twoTimes = twiceNumber(value);
+	}
+						 num is called parameter
+	public static int twiceNumber(int num){
+		int t = num * 2;
+		return t;
+	}
+
+
+	method has:
+		-return type(describe the type of output)
+		-
+}
+
+
+
+///////////////////////////
+import java.util.*;
+
+public class Diagonal{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+   
+        int n = input.nextInt();
+        
+        int[][] matrix = new int[n][n];
+        int sum1 = 0, sum2 = 0;
+        
+        for(int i = 0; i < n; i++){
+            for(int j =0; j < n; j++){
+                matrix[i][j] = input.nextInt();
+            }
+        }
+        
+        for(int i = 0 ; i< n; i++){
+               
+                sum1 += matrix[i][i];
+        
+        }
+        
+        
+        int j = n;
+        for(int i = 0; i < n; i++){
+                    sum2 += matrix[i][j];
+                    j--;
+        }
+        
+        int sum = abs(sum1-sum2);
+        System.out.println(sum);
+    }
+    
+    public static int abs(int num){
+        if(num < 0){
+            return -num;
+        }else{
+            return num;
+        }
+    }
+    
+    
+}
